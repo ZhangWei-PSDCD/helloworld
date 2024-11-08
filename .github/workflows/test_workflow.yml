@@ -1,0 +1,16 @@
+name: Test WorkFlow
+
+on: 
+  workflow_dispatch:
+    inputs: 
+      INPUT_NAME: 
+        description: '输入参数'
+        required: true
+        default: 'zhangwei'
+jobs: 
+  helloworld: 
+    runs-on: ubuntu-latest 
+    steps: 
+      - name: 输出参数
+        id: output
+        run: echo ${{ github.event.inputs.INPUT_NAME }}
