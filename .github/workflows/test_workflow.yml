@@ -2,15 +2,20 @@ name: Test WorkFlow
 
 on: 
   workflow_dispatch:
-    inputs: 
-      INPUT_NAME: 
-        description: '输入参数'
-        required: true
-        default: 'zhangwei'
+
+concurrency:
+  group: "test group"
+  cancel-in-progress: true
+
 jobs: 
-  helloworld: 
-    runs-on: ubuntu-latest 
+  testjava:
+    runs-on: ubuntu-latest
     steps: 
-      - name: 输出参数
-        id: output
-        run: echo ${{ github.event.inputs.INPUT_NAME }}
+    - uses: actions/checkout@v4
+    - name: setup java
+      uses: action/setup-java@v4
+      with: 
+        java-version: '17'
+    - name: run jar file
+      run: java -jar 'environment/java/swagger-test-1.0.0.jar'
+
