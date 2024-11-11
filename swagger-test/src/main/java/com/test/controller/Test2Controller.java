@@ -19,7 +19,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("test2")
-@Tag(name = "テストController2", description="二番名テストController")
+@Tag(name = "テストController2", description="二番目テストController")
 public class Test2Controller {
 
 	@Operation(summary="Map型APIテスト", description = "Map型APIテストdescription")
