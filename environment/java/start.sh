@@ -1,2 +1,2 @@
 echo off
-java -jar swagger-test-1.0.0.jar
+java -jar main/environment/java/swagger-test-1.0.0.jar
