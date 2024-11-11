@@ -31,6 +31,12 @@ jobs:
       uses: actions/setup-java@v1
       with: 
         java-version: '17'
+    - name: Install Maven
+      uses: actions/setup-maven@v1
+      with:
+        maven-version: 3.9.x
+    - name: Maven Install
+      run: mvn install --file pom.xml
     - name: run jar file
       run: nohup sh 'main/environment/java/start.sh' &
     - name: get json file
