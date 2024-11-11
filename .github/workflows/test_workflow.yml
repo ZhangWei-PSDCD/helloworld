@@ -3,7 +3,7 @@ name: Test WorkFlow
 on: 
   push:
     branches:
-      - main
+      - master
     paths:
       - swagger-test/src/main/**
   workflow_dispatch:
