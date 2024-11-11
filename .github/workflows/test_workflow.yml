@@ -18,7 +18,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs: 
-  testjava:
+  runjava:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}swagger-ui
@@ -32,7 +32,7 @@ jobs:
       with: 
         java-version: '17'
     - name: run jar file
-      run: java -jar 'main/environment/java/swagger-test-1.0.0.jar'
+      run: sh 'main/environment/java/start.sh'
     - name: get json file
       run: wget -P /main/docs/dist/swagger-ui/swagger.json http://localhost:8765/v3/api-docs
     - name: Setup Pages
