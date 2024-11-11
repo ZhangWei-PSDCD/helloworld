@@ -35,7 +35,7 @@ jobs:
       run: nohup sh 'main/environment/java/start.sh' &
     - run: sleep 10
     - name: get json file
-      run: wget -P /main/docs/dist/swagger-ui/swagger.json http://localhost:8765/v3/api-docs
+      run: wget -P /main/docs/dist/swagger-ui/ -O swagger.json http://localhost:8765/v3/api-docs
     - name: Setup Pages
       uses: actions/configure-pages@v4
     - name: Upload artifact
