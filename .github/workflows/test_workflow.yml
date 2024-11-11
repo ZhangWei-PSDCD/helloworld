@@ -29,6 +29,7 @@ jobs:
       with: 
         java-version: '17'
   runjava:
+    needs: setupjava
     runs-on: ubuntu-latest
     steps: 
     - name: run jar file
