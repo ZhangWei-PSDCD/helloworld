@@ -20,7 +20,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RequestMapping("test")
 public class TestController {
 
-	@Operation(summary = "テストGET", description = "GET方式でRequest")
+	@Operation(summary = "テストGET1", description = "GET方式でRequest")
     @ApiResponse(responseCode = "200", description = "Request成功")
     @ApiResponse(responseCode = "403", description = "登録情報なし或いは登録情報無効の場合")
 	@GetMapping("hello")
