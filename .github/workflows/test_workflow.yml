@@ -34,7 +34,9 @@ jobs:
     - name: run jar file
       run: nohup sh 'main/environment/java/start.sh' &
     - name: get json file
-      run: curl -o '/main/docs/dist/swagger-ui/swagger.json' http://127.0.0.1:8765/v3/api-docs/all
+      run: curl -o '/main/temp/swagger.json' http://127.0.0.1:8765/v3/api-docs/all
+    - name: move json
+      run: cp -r /main/temp /main/docs/dist/swagger-ui
     - name: Setup Pages
       uses: actions/configure-pages@v4
     - name: Upload artifact
