@@ -14,11 +14,7 @@ springdoc:
       paths-to-match: '/test/**'
       #生成文档所需的扫包路径，一般为启动类目录
       #packages-to-scan: com.psdcd
-<<<<<<< HEAD
-    - group: 'test23' 
-=======
-    - group: 'test24' 
->>>>>>> 15b898c4f609b7437cd29042e549033d41dde743
+    - group: 'test2' 
       paths-to-match: '/test2/**'
     - group: 'all'
       paths-to-match: '/test**/**'
