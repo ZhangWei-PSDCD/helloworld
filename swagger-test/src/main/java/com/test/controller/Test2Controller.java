@@ -32,6 +32,7 @@ public class Test2Controller {
 	})
 	@PostMapping("testMap")
 	public Map<String, Object> testMap(@RequestBody Map<String, Object> param){
+		//测试远程分支
 		return param;
 	}
 	
